@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Service;
+use Illuminate\Http\Request;
+
 class ServiceController extends Controller
 {
     //CRUD on Services
@@ -19,7 +20,7 @@ class ServiceController extends Controller
  {
      $validator = validator($request->all(), [
          "name" => "required|min:1|max:50|string",
-         "price" => "required|min:1|max:100000000000|numeric"
+         "price" => "required|min:1|max:100000|numeric"
      ]);
  
  
